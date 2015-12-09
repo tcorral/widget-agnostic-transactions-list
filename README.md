@@ -3,8 +3,8 @@ This repository will show how to create a transactions list widget without any d
 
 ## Index
 * Start with an empty repository.
-* **Explain how to import the widget in CXP.** 
-* Create the minimum structure to import your widget to the editor.
+* Explain how to import the widget in CXP. 
+* **Create the minimum structure to import your widget to the editor.**
 * Modify the markup to show a 'Hello World' message.
 * Modify the markup to show a list of items.
 	* Each item will contain:
@@ -24,58 +24,59 @@ This repository will show how to create a transactions list widget without any d
 * Create a new theme for our portal.
 * Style our list to look as the Transactions List Screenshot.
 
-    ![Transactions List](./readme-media/transactions-list-screenshot.png "Transactions List Screenshot")
+  ![Transactions List](./readme-media/transactions-list-screenshot.png "Transactions List Screenshot")
 
 ### Section
-####Explain how to import the widget in CXP.
-**IMPORTANT: To import a widget in CXP you should have a CXP instance running.**
+####Create the minimum structure to import your widget to the editor
+In order to import our widget to CXP it's needed a minimum structure.
 
-CXP provides the user/developer a REST API to import each component type.
-[REST API Documentation](https://my.backbase.com/training/essentials-training/portal-apis/rest-api)
+The minimum files required are:
+* index.html
+* model.xml
 
-To improve the speed of development BB provides the customer with tools that abstract the import without requiring to use a REST API client.
+**index.html**
 
-##### Importing tools:
+It will be the file that will be read by CXP to add it in your portal.
+
+CXP server reads this HTML file and:
+
+* Transforms your BODY node following to add it in your portal page.
+* It adds the LINK nodes to the end of the HEAD node in your portal page.
+* It adds the SCRIPT nodes to the end of the BODY node in your portal page.
+
+  ![Widget in Page](./readme-media/widget-structure-on-page.png "Widget Structure on Page")
+  
+**[model.xml](https://my.backbase.com/resources/documentation/portal/5.5.0/devd_depl_impe_ware_mode.html)**
+
+It's the file that tells CXP about the widget.
+
+* **src:** 
+	* Where the *index.html* or source file can be found.
+* **thumbnailUrl:** 
+	* Where the *icon.png* can be found. 
+		* This is used to show it in the "Enterprise Catalog" and in "Portal Catalog" to easily identified your widget among others.
+* **title:** 
+	* What's the *title* of our widget.
+ 	* This is used to be shown in the "Enterprise Catalog" and in "Portal Catalog" to be easily found using the search input.
+* **contextItemName:**
+	* What's the *context* of our widget.
+		* Usually this is set to **[BBHOST]** and when the widget it's imported it will be added in the "Enterprise Catalog" available for all the portals.
+ 		* This property can be used to narrow the usage of the widget to an specific portal only. 
+ 			* Replace **[BBHOST]** by the name of your portal and it will be added automatically to your portal.
+ 			
+* **order:**
+	* What's the *order* of our widget in it's container.
+		* It's set to 0 by default.
+* **area:**
+	* What's the *area* in the page where the widget is added.
+		* It's set to 0 by default.
+* **widgetChrome:**
+	* This is a property that can be used to add a wrapper to our widget, even doing possible to do it draggable if needed.
+		* It's set to "chrome-blank.html* by default that doesn't add any special behaviour.
 
 
-*YAPI:* 
-
-Webapp that can be added to the portal during the build process that provides the funcionality of import components.
-
-**[YAPI](https://my.backbase.com/training/essentials-training/portal-tools/yet-another-portal-importer)**
-
-
-*bb-cli:* 
-
-Command line tool created using [Node.js](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/)
-
-**[bb-cli](https://github.com/Backbase/bb-cli)**
-
-
-##### Which tool we are gonna use in this training?
-
-We are gonna use the bb-cli tool so you have to install it in your computer.
- 
-  *It requires administrator permissions to install global packages*
-
-```
-npm install -g bb-cli
-```
-
-Once you have installed the tool you have to change the directory to the root of your widget then you will be able to 
-import it using one of the following commands:
-
-*Import on demand:*
+Once we have created the minimum files required to import it in CXP we will execute the "import-item" command using **bb-cli** tool.
 
 ```
 bb import-item
 ```
-
-*Watch the code changes and import the widget on each change:*
-
-```
-bb import-item --watch
-```
-
-So that we know how to import our widget to CXP now it's time to create the minimum structure so that we can import it succesfully.
-
