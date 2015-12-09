@@ -17,8 +17,8 @@ This repository will show how to create a transactions list widget without any d
 			* Two decimals. i.e. 40 -> 40.00
 			* Currency sign. i.e. 40 -> $40.00
 			* Payment transactions. i.e. 40 -> -$40.00
-* **Fill the list from Javascript using fake data.**
-* Fill the list from Javascript using XHR to fetch the data from a file with fake data.
+* Fill the list from Javascript using fake data.
+* **Fill the list from Javascript using XHR to fetch the data from a file with fake data.**
 * Improve the markup to be easily styled from the theme.
 	* **Styles in widget should only be used for scaffolding**
 * Create a new theme for our portal.
@@ -27,29 +27,18 @@ This repository will show how to create a transactions list widget without any d
   ![Transactions List](./readme-media/transactions-list-screenshot.png "Transactions List Screenshot")
 
 ### Section
-#### Fill the list from Javascript using fake data.
-The idea of this step is to recreate the same list we hardcoded in the previous step but using Javascript and fake data to render it 
-on the page.
+#### Fill the list from Javascript using XHR to fetch the data from a file with fake data.
+The idea of this step is to recreate the same list but using XHR to fetch the data from a hardcoded endpoint.
 
 **Steps:**
-* Create a folder to store the scripts.
-	* I named it "scripts"
-* Create an empty Javascript file and save it in the scripts folder.
-	* I named it "main.js"
-* Add a SCRIPT tag in your *index.html* file where you will add the src attribute with the relative path to you main Javascript file.
-* Delete the content of the UL node.
-* Add a class to the UL node so that you can access it later.
-	* **You should never an id to your widget, adding it could lead to lack of reusability and maybe to some weird behaviour that is worst**
-	* I named my class "items-list"
-* Now our script should:
-	* Get a reference to the UL node henceforth named 'LIST'.
-	* Get a list of transactions with: 
-		* Month name, only 3 chars.
-		* Day of the month, 2 chars.
-		* Description of the transaction
-		* Amount that could be possible or negative but with the currency sign on it.
-	* Loop over the list of transactions and add a LI node per each in the LIST.
-	* Try to keep it as simple as possible and don't use anything else that plain Javascript.
+* Open the Javascript main file.
+* Create a "request" function that will use XHR object to fetch the data from a file.
+* Create a data folder where the fake data will be stored.
+* Create a JSON file with the fake data we used in the previous section.
+	* I named it "transactions.json"
+* Add the code to you Javascript main file to fetch the data using your request function.
+	* Mind that it will return you a plain text so you will need to parse it to convert it in a Javascript object.
+* Render the list using that data.
 * Import your widget again.
 * Reload your page.
 
