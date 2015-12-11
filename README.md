@@ -18,8 +18,8 @@ This repository will show how to create a transactions list widget without any d
 			* Currency sign. i.e. 40 -> $40.00
 			* Payment transactions. i.e. 40 -> -$40.00
 * Fill the list from Javascript using fake data.
-* **Fill the list from Javascript using XHR to fetch the data from a file with fake data.**
-* Improve the markup to be easily styled from the theme.
+* Fill the list from Javascript using XHR to fetch the data from a file with fake data.
+* **Improve the markup to be easily styled from the theme.**
 	* **Styles in widget should only be used for scaffolding**
 * Create a new theme for our portal.
 * Style our list to look as the Transactions List Screenshot.
@@ -27,25 +27,32 @@ This repository will show how to create a transactions list widget without any d
   ![Transactions List](./readme-media/transactions-list-screenshot.png "Transactions List Screenshot")
 
 ### Section
-#### Fill the list from Javascript using XHR to fetch the data from a file with fake data.
-The idea of this step is to recreate the same list but using XHR to fetch the data from a hardcoded endpoint.
+#### Improve the markup to be easily styled from the theme.
+If we take a look at the previous screenshot we will see that our output is a "BIT" different. 
+This step is try to reproduce the markup to look more similar to the example but only concerning about the markup, the style will be done in the next step.
 
-**Steps:**
-* Open the Javascript main file.
-* Create a "request" function that will use XHR object to fetch the data from a file.
-* Create a data folder where the fake data will be stored.
-* Create a JSON file with the fake data we used in the previous section.
-	* I named it "transactions.json"
-* Add the code to you Javascript main file to fetch the data using your request function.
-	* Mind that it will return you a plain text so you will need to parse it to convert it in a Javascript object.
-* Render the list using that data.
-* Import your widget again.
-* Reload your page.
+*Facts:*
 
-It will look like the next screenshot:
+* Each transaction has the same height.
+* Date is split in two lines.
+	* Month
+	* Day of the month
+* Description is split in two lines.
+	* Beneficiary.
+	* Transaction's Category
+* Date, Amount and Beneficiary have the same font size.
+* Transaction's Category font size is quite smaller than the others.
+* Description is at least two times wider than Date or Amount.
+* Date and Amount seems to have the same width;
+* Each transaction has an icon assigned.
+	* Each icon is related with the beneficiary of the transaction.
+* Each transaction has a left border of a different color.
+	* Transaction's Category defines the color of the border.
+* Each transaction has border.
+	* Between transactions the border is only one pixel height. 
+		* Only top or bottom border is added to all the transactions.
+	* First transaction has a top left and right round border.
+	* Last transaction has a bottom left and right round border.
+* Each transaction has a caret sign at the end.
 
-  ![Transactions List Javascript and fake data](./readme-media/hardcoded-list-in-html.png "Transactions List Javascript and fake data")
-  
-You also can add more than one widget in the same page.
-  
-  ![More than one widget in the same page](./readme-media/more-than-one-widget-in-page.png "More than one widget in the same page")
+To accomplish some of these facts is required to modify the fake data to add some new information and also the items template.

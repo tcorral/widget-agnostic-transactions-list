@@ -2,73 +2,109 @@
   {
     "month": "Dec",
     "day": "07",
-    "description": "The Tea Lounge",
+    "color": "green",
+    "icon": "media/tealounge.png",
+    "beneficiary": "The Tea Lounge",
+    "category": "Payment Credit Card",
     "amount": "-$40.24"
   },
   {
     "month": "Dec",
     "day": "06",
-    "description": "Francine",
+    "color": "yellow",
+    "icon": "media/francine.png",
+    "beneficiary": "Francine",
+    "category": "Cash Withdrawal",
     "amount": "-$40.55"
   },
   {
     "month": "Dec",
     "day": "06",
-    "description": "T-Mobile",
+    "color": "orange",
+    "icon": "media/tmobile.png",
+    "beneficiary": "T-Mobile",
+    "category": "Interest",
     "amount": "$15.63"
   },
   {
     "month": "Dec",
     "day": "04",
-    "description": "CH Energy Group",
+    "color": "green",
+    "icon": "media/francine.png",
+    "beneficiary": "CH Energy Group",
+    "category": "Salary",
     "amount": "$9.23"
   },
   {
     "month": "Dec",
     "day": "04",
-    "description": "CH Energy Group",
+    "color": "yellow",
+    "icon": "media/francine.png",
+    "beneficiary": "CH Energy Group",
+    "category": "Transaction",
     "amount": "-$44.24"
   },
   {
     "month": "Dec",
     "day": "03",
-    "description": "Emily Vreeland",
+    "color": "orange",
+    "icon": "media/Personas-EmilyVreeland.jpg",
+    "beneficiary": "Emily Vreeland",
+    "category": "Online Transfer",
     "amount": "-$21.22"
   },
   {
     "month": "Dec",
     "day": "03",
-    "description": "Atlantic City Electric",
+    "color": "red",
+    "icon": "media/atlanticelec.png",
+    "beneficiary": "Atlantic City Electric",
+    "category": "Transaction",
     "amount": "-$7.94"
   },
   {
     "month": "Dec",
     "day": "03",
-    "description": "Texaco",
+    "color": "blue",
+    "icon": "media/texaco.png",
+    "beneficiary": "Texaco",
+    "category": "Cash Withdrawal",
     "amount": "-$47.74"
   },
   {
     "month": "Dec",
     "day": "02",
-    "description": "Safeway Inc.",
+    "color": "yellow",
+    "icon": "media/francine.png",
+    "beneficiary": "Safeway Inc.",
+    "category": "Cash Withdrawal",
     "amount": "-$11,22"
   },
   {
     "month": "Dec",
     "day": "02",
-    "description": "Francine",
+    "color": "purple",
+    "icon": "media/francine.png",
+    "beneficiary": "Francine",
+    "category": "Bill payment",
     "amount": "-$62.30"
   },
   {
     "month": "Dec",
     "day": "02",
-    "description": "Atlantic City Electric",
+    "color": "orange",
+    "icon": "media/atlanticelec.png",
+    "beneficiary": "Atlantic City Electric",
+    "category": "Online Transfer",
     "amount": "-$13.78"
   },
   {
     "month": "Dec",
     "day": "01",
-    "description": "Gerald Harris",
+    "color": "orange",
+    "icon": "media/Personas-GeraldHarris.jpg",
+    "beneficiary": "Gerald Harris",
+    "category": "Online Transfer",
     "amount": "-$65.56"
   }
 ]
