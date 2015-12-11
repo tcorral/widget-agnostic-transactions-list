@@ -12509,3 +12509,73 @@ button.lp-widget-control:focus,
   top: 10px;
   right: 10px;
 }
+.widget-agnostic-transactions-list {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.widget-agnostic-transactions-list .date,
+.widget-agnostic-transactions-list .icon,
+.widget-agnostic-transactions-list .description,
+.widget-agnostic-transactions-list .amount {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+.widget-agnostic-transactions-list .date {
+  width: 10%;
+}
+.widget-agnostic-transactions-list .icon {
+  width: 15%;
+  min-width: 40px;
+}
+.widget-agnostic-transactions-list .amount {
+  width: 20%;
+}
+.widget-agnostic-transactions-list .description {
+  overflow: hidden;
+  width: 50%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.widget-agnostic-transactions-list .description small {
+  color: #777;
+}
+.widget-agnostic-transactions-list .amount {
+  text-align: right;
+  margin-top: 10px;
+}
+.widget-agnostic-transactions-list .date,
+.widget-agnostic-transactions-list .icon,
+.widget-agnostic-transactions-list .description,
+.widget-agnostic-transactions-list .amount,
+.widget-agnostic-transactions-list .caret {
+  float: left;
+  font-weight: 500;
+}
+.widget-agnostic-transactions-list .caret {
+  margin-top: 18px;
+  margin-left: 10px;
+}
+.widget-agnostic-transactions-list li {
+  overflow: hidden;
+}
+.widget-agnostic-transactions-list li.transaction-category-border {
+  border-left-width: 5px;
+}
+.widget-agnostic-transactions-list li.transaction-category-border.green {
+  border-left-color: green;
+}
+.widget-agnostic-transactions-list li.transaction-category-border.red {
+  border-left-color: red;
+}
+.widget-agnostic-transactions-list li.transaction-category-border.blue {
+  border-left-color: blue;
+}
+.widget-agnostic-transactions-list li.transaction-category-border.purple {
+  border-left-color: purple;
+}
+.widget-agnostic-transactions-list li.transaction-category-border.orange {
+  border-left-color: orange;
+}
+.widget-agnostic-transactions-list li.transaction-category-border.yellow {
+  border-left-color: yellow;
+}

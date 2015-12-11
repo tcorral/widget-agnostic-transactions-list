@@ -21,31 +21,11 @@ This repository will show how to create a transactions list widget without any d
 * Fill the list from Javascript using XHR to fetch the data from a file with fake data.
 * Improve the markup to be easily styled from the theme.
 	* **Styles in widget should only be used for scaffolding**
-* **Create a new theme for our portal.**
-* Style our list to look as the Transactions List Screenshot.
+* Create a new theme for our portal.
+* **Style our list to look as the Transactions List Screenshot.**
 
   ![Transactions List](./readme-media/transactions-list-screenshot.png "Transactions List Screenshot")
 
 ### Section
-#### Create a new theme for our portal.
-Clone the theme-default from bitbucket:
-
-```
-git clone https://bitbucket.org/backbase/lpm-theme-default
-```
-Follow the instructions in the README.md file
-
-Build the theme using:
-
-```
-bb theme-build
-```
-
-Import the theme using:
-
-```
-bb import-item
-```
-
-Do you have an example of the compiled training theme in the training-content folder.
-I have called it 'training-theme'.
+#### Style our list to look as the Transactions List Screenshot.
+Check the ```training-content/training-theme/styles/theme.less``` file to see a solution.

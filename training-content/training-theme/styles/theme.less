@@ -2,3 +2,66 @@
 //
 // Custom theme styles.
 // --------------------------------------------------
+.widget-agnostic-transactions-list {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  .date, .icon, .description, .amount {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+  }
+  .date {
+    width: 10%;
+  }
+  .icon {
+    width: 15%;
+    min-width: 40px;
+  }
+  .amount {
+    width: 20%;
+  }
+  .description {
+    overflow: hidden;
+    width: 50%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    small {
+      color: #777;
+    }
+  }
+  .amount {
+    text-align: right;
+    margin-top: 10px;
+  }
+  .date, .icon, .description, .amount, .caret {
+    float: left;
+    font-weight: 500;
+  }
+  .caret {
+    margin-top: 18px;
+    margin-left: 10px;
+  }
+  li {
+    overflow: hidden;
+    &.transaction-category-border {
+      border-left-width: 5px;
+      &.green {
+        border-left-color: green;
+      }
+      &.red {
+        border-left-color: red;
+      }
+      &.blue {
+        border-left-color: blue;
+      }
+      &.purple {
+        border-left-color: purple;
+      }
+      &.orange {
+        border-left-color: orange;
+      }
+      &.yellow {
+        border-left-color: yellow;
+      }
+    }
+  }
+}
