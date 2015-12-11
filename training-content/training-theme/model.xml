@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <feature>
+    <name>training-theme</name>
+    <contextItemName>[BBHOST]</contextItemName>
+    <properties>
+      <property name="title" label="Title" viewHint="admin,designModeOnly">
+        <value type="string">Default Theme</value>
+      </property>
+    </properties>
+  </feature>
+</catalog>

@@ -1,0 +1,6 @@
+{
+  "resolvers": [
+    "filesystem-bower-resolver",
+    "bb-bower-resolver"
+  ]
+}
